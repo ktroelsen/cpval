@@ -1,45 +1,49 @@
-<html>
-  <head>
-    <title>Gamefroot Arcade</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Game</title>
     <style>
-      body, html {
-        margin: 0;
-        padding: 0;
-        background: black;
-        overflow:  hidden;
-      }
-
-      #game-container {
-        margin: auto;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .game-box {
+            margin-top: 20px;
+            padding: 20px;
+            width: 200px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .game-box:hover {
+            background-color: #45a049;
+        }
     </style>
-
-    <script src="libs/phaser.js"></script>
-    <script src="libs/phaserfroot.js"></script>
-    <script>
-      prompt("what is yor name??");
-      alert("hello cool name");
-
-    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Game</h1>
+        <div class="game-box" onclick="openGame()">Test Game</div>
+    </div>
 
     <script>
-      var game = Phaserfroot.boot( {
-        data: "game.json",
-        parent: "game-container",
-        width: 768,
-        height: 512,
-        scale: {
-          autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
-          mode: Phaser.Scale.FIT,
-        },
-        splash: {
-          image: "assets/images/gamefrootAtlas.png",
-          json: "assets/images/gamefrootAtlas.phaser.json",
-        },
-      } );
+        function openGame() {
+            window.location.href = "game1/index.html";
+        }
     </script>
-  </head>
-  <body>
-    <div id="game-container"></div>
-  </body>
+</body>
 </html>
