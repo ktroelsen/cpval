@@ -1,8 +1,2 @@
 # Ignorerer en fil
-filename.txt
-
-# Ignorerer en mappe og alle filer i den
-foldername/
-
-# Ignorerer alle filer med en bestemt filendelse
-*gamefrootAtlas.png
+game1/assets/images/gamefrootAtlas.png
